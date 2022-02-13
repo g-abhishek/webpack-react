@@ -1,0 +1,14 @@
+
+// This tells Babel to use the presets (plugins). 
+// Later when we call "babel-loader" from Webpack, this is where it will look to know what to do.
+{
+    "presets": [
+        ["@babel/preset-env", { "modules": false} ], // with this we dont have to specify, that we are using ES2015, ES2016, ES2017. Babel will automatically detect and transpile accordingly
+        "@babel/preset-react" // Tells Babel we will be using React
+    ],
+    "plugins": [
+        "@babel/plugin-syntax-dynamic-import", // Be able to use dynamic imports
+        "@babel/plugin-proposal-class-properties", // use class properties
+        "react-hot-loader/babel"
+    ]
+}
