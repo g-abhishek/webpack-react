@@ -1,7 +1,7 @@
 // we need a tool that can take all the files that we have written and combine/bundle them into a single js file
 // while keeping track of their dependencies.
 // The tool that does this are called "bundlers" and "webpack" is one of the many javascript bundlers!
-
+const path = require("path");
 const webpack = require("webpack"); // Module bundler
 const HtmlWebpackPlugin = require("html-webpack-plugin"); // it will generate html file for our application
 
@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3000;
 
 module.exports = {
   // Webpack configuration goes here
-  mode: "development",
+  // mode: "development",
   entry: "./src/index.js", // Specifies the entry point of your application; this is where your React app lives and where the bundling process will begin
   output: {
     // Tells Webpack how to write the compiled files to disk
@@ -67,8 +67,8 @@ module.exports = {
   },
   // here we config the development server
   devServer: {
-      host: "localhost",
-      port: PORT,
+      // host: "localhost",
+      // port: PORT,
       historyApiFallback: true,   // We set historyApiFallback to true and open to true // This will open the browser automatically and launch your application in http://localhost:3000. 
       open: true,
       hot: true, // Enable HMR on the server
