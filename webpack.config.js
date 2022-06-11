@@ -29,6 +29,8 @@ module.exports = {
         exclude: /node_modules/,    // exclude node_modules
         use: ["babel-loader"],      // will use babel and transpile the code into vanilla js
       },
+      // We need the css-loader module to interpret @import and url() like import/require(), and resolve them, 
+      // along with the style-loader module to inject our CSS into the DOM.
       {
         test: /\.css$/,             // test for .css extension file
         use: [
